@@ -71,7 +71,7 @@ public class CiService {
         trainCompositionMessage.setMessageTypeVersion(MessageType.TRAIN_COMPOSITION_MESSAGE.version());
         Company recipient = companyRepository.findByCode("0084").orElseThrow(EntityNotFoundException::new);
         trainCompositionMessage.setRecipient(recipient);
-        Company sender = companyRepository.findByCode("9001").orElseThrow(EntityNotFoundException::new);
+        Company sender = companyRepository.findByCode(securityContext.getCompanyCode()).orElseThrow(EntityNotFoundException::new);
         trainCompositionMessage.setSender(sender);
         trainCompositionMessage.setSenderReference("RLS-9001-"+securityContext.getCompanyCode()+"-train:"+train.getId()+"-"+now.toString());
         trainCompositionMessage.setMessageIdentifier(tempRandomUUID);
@@ -109,6 +109,7 @@ public class CiService {
             CustomMessageStatus customMessageStatus = CustomMessageStatusMapper.map(Objects.requireNonNull(liTechnicalAckResponseEntity.getBody()));
             customMessageStatus.setTrain(train);
             train.getCustomMessageStatuses().add(customMessageStatus);
+            train = trainRepository.save(train);
             return TrainDtoMapper.map(train);
 
         } catch (JAXBException | IOException | SAXException | HttpServerErrorException e) {
