@@ -111,7 +111,9 @@ public class TrainCompositionMessageXmlMapper {
         for (JourneySection journeySection : tcm.getTrain().getJourneySections()) {
             TrainCompositionJourneySection trainCompositionJourneySection = mapper.map(journeySection, TrainCompositionJourneySection.class);
             TrainComposition trainComposition = journeySection.getTrainComposition();
-            int i = 1;
+            int position = 1;
+            int tractionPositionInGroup = 1;
+            int count = 1;
             for (RollingStock rollingStock : trainComposition.getRollingStock()) {
                 if (rollingStock.getStockType().equals("traction")) {
                     TractionInTrain tractionInTrain = (TractionInTrain) rollingStock;
@@ -119,11 +121,20 @@ public class TrainCompositionMessageXmlMapper {
                             .setDriverIndication(BigInteger.valueOf(tractionInTrain.getDriverIndication()))
                             .setLocoNumber(String.valueOf(tractionInTrain.getStockIdentifier()))
                             .setLocoTypeNumber(String.valueOf(tractionInTrain.getTraction().getLocoTypeNumber()))
-                            .setTractionMode(11)
                             .setTractionType(tractionInTrain.getTraction().getTractionType().getCode())
-                            .setTractionPositionInTrain(i);
+                            .setTractionPositionInTrain(position);
+                    int role;
+                    if (position == 1) {
+                        role = 1;
+                    } else if (trainComposition.getRollingStock().size() == count) {
+                        role = 3;
+                    } else {
+                        role = 2;
+                    }
+                    int tractionMode = Integer.parseInt(role + String.valueOf(tractionPositionInGroup));
+                    locoIdent.setTractionMode(tractionMode);
                     trainCompositionJourneySection.getLocoIdent().add(locoIdent);
-
+                    tractionPositionInGroup++;
                 } else {
                     WagonInTrain wagonInTrain = (WagonInTrain) rollingStock;
                     WagonOperationalData wagonOperationalData = new WagonOperationalData()
@@ -143,7 +154,7 @@ public class TrainCompositionMessageXmlMapper {
                         );
                     }
                     WagonData wagonData = new WagonData()
-                            .setWagonTrainPosition(i)
+                            .setWagonTrainPosition(position)
                             .setWagonNumberFreight(String.valueOf(wagonInTrain.getStockIdentifier()))
                             .setWagonOperationalData(wagonOperationalData)
                             .setWagonTechData(
@@ -153,8 +164,9 @@ public class TrainCompositionMessageXmlMapper {
                                             .setLengthOverBuffers(wagonInTrain.getLength())
                             );
                     trainCompositionJourneySection.getWagonData().add(wagonData);
-                    i++;
+                    position++;
                 }
+                count++;
             }
             xmlTcm.getTrainCompositionJourneySection().add(trainCompositionJourneySection);
         }
