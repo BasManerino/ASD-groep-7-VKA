@@ -2,12 +2,8 @@ package nl.rls.ASD.message.domain;
 
 import java.util.Date;
 
-import javax.persistence.Embeddable;
-import javax.persistence.Entity;
-
 import nl.rls.ASD.common.domain.CompanyId;
-import nl.rls.composer.domain.Company;
-import nl.rls.composer.domain.Train;
+import nl.rls.ASD.vehicle.domain.TrainId;
 
 public class TrainCompositionMessage{
 	private TrainCompositionMessageId id;
@@ -22,7 +18,6 @@ public class TrainCompositionMessage{
 	
     public TrainCompositionMessage(TrainCompositionMessageId id, String objectType, CompanyId companyId, String core,
 			String variant, int timetableYear, Date startDate, TrainId trainId) {
-		super();
 		this.id = id;
 		this.objectType = objectType;
 		this.companyId = companyId;

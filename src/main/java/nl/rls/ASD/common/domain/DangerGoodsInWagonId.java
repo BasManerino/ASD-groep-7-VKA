@@ -1,9 +1,9 @@
 package nl.rls.ASD.common.domain;
 
-public class CompanyId {
+public class DangerGoodsInWagonId {
 	public int id;
 
-	public CompanyId(int id) {
+	public DangerGoodsInWagonId(int id) {
 		this.id = id;
 	}
 

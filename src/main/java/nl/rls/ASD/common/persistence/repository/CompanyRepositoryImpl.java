@@ -1,11 +1,10 @@
-package nl.rls.ASD.common.persistence.repositoryImpl;
+package nl.rls.ASD.common.persistence.repository;
 
 import javax.persistence.EntityManager;
 
 import org.springframework.stereotype.Service;
 
 import nl.rls.ASD.common.domain.Company;
-import nl.rls.ASD.common.persistence.repository.CompanyRepository;
 
 @Service("TrainCompositionMessage Repository")
 public class CompanyRepositoryImpl implements CompanyRepository {
