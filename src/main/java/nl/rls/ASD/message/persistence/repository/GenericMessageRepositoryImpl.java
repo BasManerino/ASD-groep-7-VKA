@@ -1,13 +1,10 @@
-package nl.rls.ASD.message.persistence.repositoryImpl;
+package nl.rls.ASD.message.persistence.repository;
 
 import javax.persistence.EntityManager;
 
 import org.springframework.stereotype.Service;
 
 import nl.rls.ASD.message.domain.GenericMessage;
-import nl.rls.ASD.message.domain.TrainCompositionMessage;
-import nl.rls.ASD.message.persistence.repository.GenericMessageRepository;
-import nl.rls.ASD.message.persistence.repository.TrainCompositionMessageRepository;
 
 @Service("TrainCompositionMessage Repository")
 public class GenericMessageRepositoryImpl implements GenericMessageRepository {

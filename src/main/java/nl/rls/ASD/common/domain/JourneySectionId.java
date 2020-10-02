@@ -1,9 +1,9 @@
 package nl.rls.ASD.common.domain;
 
-public class CompanyId {
+public class JourneySectionId {
 	public int id;
 
-	public CompanyId(int id) {
+	public JourneySectionId(int id) {
 		this.id = id;
 	}
 

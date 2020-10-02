@@ -1,4 +1,4 @@
-package nl.rls.ASD.common.domain;
+package nl.rls.ASD.vehicle.domain;
 
 public class CompanyId {
 	public int id;
@@ -9,5 +9,5 @@ public class CompanyId {
 
 	public int getId() {
 		return id;
-	}
+	}	
 }
