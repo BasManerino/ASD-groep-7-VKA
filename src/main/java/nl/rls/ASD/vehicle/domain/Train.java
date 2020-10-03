@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import nl.rls.ASD.common.domain.CompanyId;
 import nl.rls.ASD.common.domain.JourneySectionId;
 import nl.rls.ASD.common.domain.LocationId;
 import nl.rls.ASD.message.domain.TrainCompositionMessageId;
