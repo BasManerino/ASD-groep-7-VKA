@@ -8,10 +8,10 @@ import nl.rls.ci.url.BaseURL;
 
 @RestController
 @RequestMapping(BaseURL.BASE_PATH + "/genericmessage")
-public class GenericMessageController {
+public class GenericMessageController2 {
     private final GenericMessageService service;
 
-    public GenericMessageController(GenericMessageService service) {
+    public GenericMessageController2(GenericMessageService service) {
         this.service = service;
     }
 }

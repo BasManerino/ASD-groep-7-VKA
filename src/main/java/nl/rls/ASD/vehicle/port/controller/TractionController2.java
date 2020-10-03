@@ -8,10 +8,10 @@ import nl.rls.ci.url.BaseURL;
 
 @RestController
 @RequestMapping(BaseURL.BASE_PATH + "/traction")
-public class TractionController {
+public class TractionController2 {
     private final TractionService service;
 
-    public TractionController(TractionService service) {
+    public TractionController2(TractionService service) {
         this.service = service;
     }
 }

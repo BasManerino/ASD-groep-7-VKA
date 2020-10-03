@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(BaseURL.BASE_PATH + "/company")
-public class CompanyController {
+public class CompanyController2 {
     private final CompanyService service;
 
-    public CompanyController(CompanyService service) {
+    public CompanyController2(CompanyService service) {
         this.service = service;
     }
 }

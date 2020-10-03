@@ -8,10 +8,10 @@ import nl.rls.ci.url.BaseURL;
 
 @RestController
 @RequestMapping(BaseURL.BASE_PATH + "/rollingstock")
-public class RollingStockController {
+public class RollingStockController2 {
     private final RollingStockService service;
 
-    public RollingStockController(RollingStockService service) {
+    public RollingStockController2(RollingStockService service) {
         this.service = service;
     }
 }

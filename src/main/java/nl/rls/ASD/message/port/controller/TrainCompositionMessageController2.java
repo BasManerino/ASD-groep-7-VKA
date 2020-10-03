@@ -13,10 +13,10 @@ import nl.rls.ci.url.BaseURL;
 // Dit is de REST service.
 @RestController
 @RequestMapping(BaseURL.BASE_PATH + "/traincompositionmessage")
-public class TrainCompositionMessageController{
+public class TrainCompositionMessageController2 {
     private final TrainCompositionMessageService service;
 
-    public TrainCompositionMessageController(TrainCompositionMessageService service) {
+    public TrainCompositionMessageController2(TrainCompositionMessageService service) {
         this.service = service;
     }
 

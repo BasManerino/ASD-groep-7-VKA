@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import nl.rls.ASD.common.domain.Company;
 
-@Service("TrainCompositionMessage Repository")
+@Service("Company Repository")
 public class CompanyRepositoryImpl implements CompanyRepository {
  
     private EntityManager em;

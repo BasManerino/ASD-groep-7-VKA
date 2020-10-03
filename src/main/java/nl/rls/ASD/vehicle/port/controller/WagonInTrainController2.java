@@ -8,10 +8,10 @@ import nl.rls.ci.url.BaseURL;
 
 @RestController
 @RequestMapping(BaseURL.BASE_PATH + "/wagonintrain")
-public class WagonInTrainController {
+public class WagonInTrainController2 {
     private final WagonInTrainService service;
 
-    public WagonInTrainController(WagonInTrainService service) {
+    public WagonInTrainController2(WagonInTrainService service) {
         this.service = service;
     }
 }
