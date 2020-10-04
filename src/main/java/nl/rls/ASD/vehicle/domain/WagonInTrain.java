@@ -3,17 +3,16 @@ package nl.rls.ASD.vehicle.domain;
 import java.util.ArrayList;
 import java.util.List;
 
-import nl.rls.ASD.common.domain.DangerGoodsInWagon;
-import nl.rls.composer.domain.code.BrakeType;
+import nl.rls.ASD.common.domain.DangerGoodsInWagonId;
 
 public class WagonInTrain {
     
     private BrakeType brakeType;
     private int totalLoadWeight;
-    private List<DangerGoodsInWagon> dangerGoodsInWagons = new ArrayList<>();
+    private List<DangerGoodsInWagonId> dangerGoodsInWagons = new ArrayList<>();
     private WagonCode wagon;
     
-	public WagonInTrain(BrakeType brakeType, int totalLoadWeight, List<DangerGoodsInWagon> dangerGoodsInWagons,
+	public WagonInTrain(BrakeType brakeType, int totalLoadWeight, List<DangerGoodsInWagonId> dangerGoodsInWagons,
 			WagonCode wagon) {
 		super();
 		this.brakeType = brakeType;
@@ -28,7 +27,7 @@ public class WagonInTrain {
 	public int getTotalLoadWeight() {
 		return totalLoadWeight;
 	}
-	public List<DangerGoodsInWagon> getDangerGoodsInWagons() {
+	public List<DangerGoodsInWagonId> getDangerGoodsInWagons() {
 		return dangerGoodsInWagons;
 	}
 	public WagonCode getWagon() {

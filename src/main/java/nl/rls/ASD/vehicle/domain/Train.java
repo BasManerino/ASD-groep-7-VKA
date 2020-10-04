@@ -11,6 +11,7 @@ import nl.rls.ASD.message.domain.TrainCompositionMessageId;
 
 public class Train {
 
+	private TrainId id;
     private int trainType;
     private String operationalTrainNumber;
     private Date scheduledTimeAtHandover;
@@ -21,10 +22,10 @@ public class Train {
     private List<JourneySectionId> journeySections = new ArrayList<JourneySectionId>();
     private List<TrainCompositionMessageId> trainCompositionMessages = new ArrayList<TrainCompositionMessageId>();
     
-	public Train(int trainType, String operationalTrainNumber, Date scheduledTimeAtHandover,
+	public Train(TrainId id, int trainType, String operationalTrainNumber, Date scheduledTimeAtHandover,
 			Date scheduledDateTimeAtTransfer, LocationId transferPoint, CompanyId transfereeIM,
 			List<JourneySectionId> journeySections, List<TrainCompositionMessageId> trainCompositionMessages) {
-		super();
+		this.id = id;
 		this.trainType = trainType;
 		this.operationalTrainNumber = operationalTrainNumber;
 		this.scheduledTimeAtHandover = scheduledTimeAtHandover;
@@ -35,6 +36,12 @@ public class Train {
 		this.trainCompositionMessages = trainCompositionMessages;
 	}
 	
+	public TrainId getId() {
+		return id;
+	}
+	public void setId(TrainId id) {
+		this.id = id;
+	}
 	public int getTrainType() {
 		return trainType;
 	}
