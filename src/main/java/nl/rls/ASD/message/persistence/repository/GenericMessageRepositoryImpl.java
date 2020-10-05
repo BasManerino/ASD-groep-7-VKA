@@ -15,27 +15,22 @@ import nl.rls.ASD.message.domain.TrainCompositionMessage;
 public class GenericMessageRepositoryImpl implements GenericMessageRepository {
 
 	@Override
-	public int nextIdentity() throws SQLException {
-		// TODO Auto-generated method stub
-		return 0;
+	public int nextIdentity(){
+		return 1;
 	}
 
 	@Override
-	public GenericMessage getGenericMessageById(GenericMessageId id) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean getGenericMessageById(boolean check) {
+		return check;
 	}
 
 	@Override
 	public GenericMessage saveGenericMessage(GenericMessage gm) {
-		// TODO Auto-generated method stub
-		return null;
+		return gm;
 	}
 
 	@Override
 	public void deleteGenericMessage(GenericMessage gm) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	

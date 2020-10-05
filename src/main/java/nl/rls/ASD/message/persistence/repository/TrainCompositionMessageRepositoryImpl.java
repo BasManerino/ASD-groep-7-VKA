@@ -20,7 +20,7 @@ public class TrainCompositionMessageRepositoryImpl implements TrainCompositionMe
 	@Override
 	public int nextIdentity() throws SQLException {
 		// TODO Auto-generated method stub
-		return 0;
+		return 1;
 	}
 
 	@Override

@@ -12,7 +12,7 @@ import nl.rls.ASD.common.domain.CompanyId;
 public interface CompanyRepository2{
     int nextIdentity() throws SQLException;
 
-    Company getCompanyById(CompanyId id);
+    boolean getCompanyById(boolean check);
 
     Company saveCompany(Company gm);
 

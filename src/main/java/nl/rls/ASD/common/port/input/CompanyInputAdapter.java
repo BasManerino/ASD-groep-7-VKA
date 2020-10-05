@@ -6,5 +6,5 @@ import nl.rls.ASD.common.domain.Company;
 import nl.rls.ASD.common.domain.CompanyId;
 
 public interface CompanyInputAdapter {
-	 boolean existsById(CompanyId id);
+	 boolean existsById(boolean check);
 }

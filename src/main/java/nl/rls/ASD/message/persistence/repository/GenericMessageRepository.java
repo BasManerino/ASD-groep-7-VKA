@@ -6,9 +6,9 @@ import nl.rls.ASD.message.domain.GenericMessage;
 import nl.rls.ASD.message.domain.GenericMessageId;
 
 public interface GenericMessageRepository{
-	int nextIdentity() throws SQLException;
+	int nextIdentity();
 	
-    GenericMessage getGenericMessageById(GenericMessageId id);
+    boolean getGenericMessageById(boolean check);
    
     GenericMessage saveGenericMessage(GenericMessage gm);
      
