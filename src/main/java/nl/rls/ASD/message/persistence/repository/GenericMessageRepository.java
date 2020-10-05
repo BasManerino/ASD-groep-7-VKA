@@ -2,10 +2,15 @@ package nl.rls.ASD.message.persistence.repository;
 
 import java.sql.SQLException;
 
-import org.springframework.data.repository.CrudRepository;
-
 import nl.rls.ASD.message.domain.GenericMessage;
+import nl.rls.ASD.message.domain.GenericMessageId;
 
-public interface GenericMessageRepository extends CrudRepository<GenericMessage, String>{
+public interface GenericMessageRepository{
 	int nextIdentity() throws SQLException;
+	
+    GenericMessage getGenericMessageById(GenericMessageId id);
+   
+    GenericMessage saveGenericMessage(GenericMessage gm);
+     
+    void deleteGenericMessage(GenericMessage gm);
 }

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import nl.rls.ASD.common.domain.CompanyId;
 import nl.rls.ASD.message.domain.TrainCompositionMessage;
-import nl.rls.ASD.message.port.service.TrainCompositionMessageService;
+import nl.rls.ASD.message.port.service.TrainCompositionMessageApplicationService;
 import nl.rls.ASD.vehicle.domain.TrainId;
 import nl.rls.ci.url.BaseURL;
 import nl.rls.util.Response;
@@ -24,11 +24,6 @@ import nl.rls.util.Response;
 @RestController
 @RequestMapping(BaseURL.BASE_PATH + "/traincompositionmessage")
 public class TrainCompositionMessageController implements TrainCompositionMessageInputAdapter{
-    private final TrainCompositionMessageService service;
-
-    public TrainCompositionMessageController(TrainCompositionMessageService service) {
-        this.service = service;
-    }
 
     @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
@@ -36,6 +31,7 @@ public class TrainCompositionMessageController implements TrainCompositionMessag
     		TrainId trainId, int messageStatus, int messageType, String messageTypeVersion, String messageIdentifier, Date messageDateTime,
     		String senderReference, CompanyId sender, CompanyId recipient) throws SQLException
     {
+    	TrainCompositionMessageApplicationService service = new TrainCompositionMessageApplicationService();
     	return service.createTrainCompositionMessage(objectType, company, core, variant, timetableYear, startDate,
         		trainId, messageStatus, messageType, messageTypeVersion, messageIdentifier, messageDateTime,
         		senderReference, sender, recipient);

@@ -4,7 +4,7 @@ import nl.rls.ASD.common.domain.CompanyId;
 //import nl.rls.ASD.common.port.controller.CompanyController2;
 import nl.rls.ASD.common.port.service.CompanyApplicationService;
 
-public class TrainCompositionService implements TrainCompositionMessageOutputAdapter{
+public class TrainCompositionMessageService implements TrainCompositionMessageOutputAdapter{
 
 	@Override
 	public CompanyId getCompanyById() {

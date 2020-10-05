@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(BaseURL.BASE_PATH + "/company")
-public class CompanyController implements CompanyInputAdapter{
+public class CompanyController2 implements CompanyInputAdapter{
     private final CompanyApplicationService service;
 
-    public CompanyController(CompanyApplicationService service) {
+    public CompanyController2(CompanyApplicationService service) {
         this.service = service;
     }
     
