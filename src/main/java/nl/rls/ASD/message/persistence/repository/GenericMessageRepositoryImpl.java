@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import nl.rls.ASD.message.domain.GenericMessage;
 
-@Service("TrainCompositionMessage Repository")
+@Service("GenericMessage Repository")
 public class GenericMessageRepositoryImpl implements GenericMessageRepository {
  
     private EntityManager em;

@@ -1,5 +1,6 @@
 package nl.rls.ASD.vehicle.port.controller;
 
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,10 +9,11 @@ import nl.rls.ci.url.BaseURL;
 
 @RestController
 @RequestMapping(BaseURL.BASE_PATH + "/train")
-public class TrainController {
+@Service("TrainController2")
+public class TrainController2 {
     private final TrainService service;
 
-    public TrainController(TrainService service) {
+    public TrainController2(TrainService service) {
         this.service = service;
     }
 }

@@ -1,14 +1,14 @@
 package nl.rls.ASD.vehicle.persistence.repository;
 
-import java.util.List;
-import java.util.Optional;
+import nl.rls.ASD.vehicle.domain.Wagon;
+import nl.rls.ASD.vehicle.domain.WagonCode;
+import org.springframework.stereotype.Repository;
 
-import nl.rls.composer.domain.Wagon;
-
+@Repository
 public interface WagonRepository {
-    List<Wagon> findByOwnerId(int ownerId);
+    Wagon getWagonByCode(WagonCode code);
 
-    Optional<Wagon> findByIdAndOwnerId(int id, int ownerId);
+    Wagon saveWagon(Wagon w);
 
-    Optional<Wagon> findByNumberFreightAndOwnerId(String numberFreight, int ownerId);
+    void deleteWagon(Wagon w);
 }
