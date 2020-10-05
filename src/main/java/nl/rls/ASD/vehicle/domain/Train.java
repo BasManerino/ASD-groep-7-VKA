@@ -35,6 +35,20 @@ public class Train {
 		this.journeySections = journeySections;
 		this.trainCompositionMessages = trainCompositionMessages;
 	}
+
+	public Train(int id, int trainType, String operationalTrainNumber, Date scheduledTimeAtHandover,
+				 Date scheduledDateTimeAtTransfer, int transferPoint, int transfereeIM,
+				 List<JourneySectionId> journeySections, List<TrainCompositionMessageId> trainCompositionMessages) {
+		this.id = new TrainId(id);
+		this.trainType = trainType;
+		this.operationalTrainNumber = operationalTrainNumber;
+		this.scheduledTimeAtHandover = scheduledTimeAtHandover;
+		this.scheduledDateTimeAtTransfer = scheduledDateTimeAtTransfer;
+		this.transferPoint = new LocationId(transferPoint);
+		this.transfereeIM = new CompanyId(transfereeIM);
+		this.journeySections = journeySections;
+		this.trainCompositionMessages = trainCompositionMessages;
+	}
 	
 	public TrainId getId() {
 		return id;
