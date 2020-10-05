@@ -11,7 +11,7 @@ import nl.rls.ASD.message.domain.GenericMessage;
 import nl.rls.ASD.message.domain.GenericMessageId;
 import nl.rls.ASD.message.domain.TrainCompositionMessage;
 
-@Service("TrainCompositionMessage Repository")
+@Service("GenericMessage Repository")
 public class GenericMessageRepositoryImpl implements GenericMessageRepository {
 
 	@Override

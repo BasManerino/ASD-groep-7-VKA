@@ -36,7 +36,7 @@ public class TrainDtoMapper {
         dto.setJourneySections(dtoList);
 
         dto.add(linkTo(methodOn(TrainController.class).getById(entity.getId())).withSelfRel().withTitle(entity.getOperationalTrainNumber()));
-//        dto.add(linkTo(methodOn(CompanyController.class).getById(entity.getTransfereeIM().getId())).withRel("transfereeIM").withTitle(entity.getTransfereeIM().getName()));
+//        dto.add(linkTo(methodOn(CompanyController2.class).getById(entity.getTransfereeIM().getId())).withRel("transfereeIM").withTitle(entity.getTransfereeIM().getName()));
         dto.add(linkTo(methodOn(LocationController.class).getById(entity.getTransferPoint().getLocationPrimaryCode())).withRel("transferPoint").withTitle(entity.getTransferPoint().getPrimaryLocationName()));
         return dto;
     }
