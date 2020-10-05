@@ -18,8 +18,10 @@ public class Train {
     private LocationId transferPoint;
     private CompanyId transfereeIM;
     
-    private List<JourneySectionId> journeySections = new ArrayList<JourneySectionId>();
-    private List<TrainCompositionMessageId> trainCompositionMessages = new ArrayList<TrainCompositionMessageId>();
+    private List<JourneySectionId> journeySections;
+    private List<TrainCompositionMessageId> trainCompositionMessages;
+
+
     
 	public Train(int trainType, String operationalTrainNumber, Date scheduledTimeAtHandover,
 			Date scheduledDateTimeAtTransfer, LocationId transferPoint, CompanyId transfereeIM,
@@ -30,6 +32,10 @@ public class Train {
 		this.scheduledTimeAtHandover = scheduledTimeAtHandover;
 		this.scheduledDateTimeAtTransfer = scheduledDateTimeAtTransfer;
 		this.transferPoint = transferPoint;
+
+		// TODO: Is dit goed?
+
+
 		this.transfereeIM = transfereeIM;
 		this.journeySections = journeySections;
 		this.trainCompositionMessages = trainCompositionMessages;
