@@ -18,7 +18,7 @@ public class WagonRepositoryImpl implements WagonRepository {
 		return em.find(Wagon.class, code);
 	}
 
-	//Deze method zorgt ervoor dat de Wagon in de database wordt opgeslagen - Arjan
+	// Deze method zorgt ervoor dat de Wagon in de database wordt opgeslagen - Arjan
 	public Wagon saveWagon(Wagon w) {
 		if (w.getCode() == null) {
 			em.persist(w);
