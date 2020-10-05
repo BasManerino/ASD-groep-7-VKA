@@ -112,6 +112,6 @@
 	<wsdl:service name="LIReceiveMessageService">
 		<wsdl:port binding="tns:LIReceiveMessageServiceSoapBinding"
 			name="UICReceiveMessagePort">
-			<soap:address location="https://localhost/LIMessageProcessing/http/UICCCMessageProcessing/UICCCMessageProcessingInboundWS" 		</wsdl:port>
+			<soap:address location="https://localhost/LIMessageProcessing/http/UICCCMessageProcessing/UICCCMessageProcessingInboundWS"></soap:address> 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>

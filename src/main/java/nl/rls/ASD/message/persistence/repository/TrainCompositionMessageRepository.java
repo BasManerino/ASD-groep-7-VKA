@@ -1,12 +1,9 @@
 package nl.rls.ASD.message.persistence.repository;
 
-import nl.rls.ASD.message.domain.TrainCompositionMessage;
+import org.springframework.data.repository.CrudRepository;
 
-public interface TrainCompositionMessageRepository {
-	
-    TrainCompositionMessage getTrainCompositionMessageById(int id);
- 
-    TrainCompositionMessage saveTrainCompositionMessage(TrainCompositionMessage tcm);
-     
-    void deleteTrainCompositionMessage(TrainCompositionMessage tcm);
+import nl.rls.ASD.message.domain.TrainCompositionMessage;
+import nl.rls.ASD.message.domain.TrainCompositionMessageId;
+
+public interface TrainCompositionMessageRepository extends CrudRepository<TrainCompositionMessage, TrainCompositionMessageId>{
 }
