@@ -23,6 +23,8 @@ public class TrainCompositionMessageController2 {
     @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     public boolean createTrainCompositionMessage() {
-    	return service.createTrainCompositionMessage();
+        // TODO: Dikke vette error hier
+    	//return service.createTrainCompositionMessage();
+        return false;
     }
 }
