@@ -35,7 +35,7 @@ public class CompanyRepositoryImpl implements CompanyRepository {
 	public boolean existsById(CompanyId id) {
 		// TODO Auto-generated method stub
 		return false;
-	}
+	}	
 
 	@Override
 	public Iterable<Company> findAll() {

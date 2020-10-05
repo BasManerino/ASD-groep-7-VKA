@@ -1,5 +1,6 @@
 package nl.rls.ASD.message.persistence.repository;
 
+import java.sql.SQLException;
 import java.util.Optional;
 
 import javax.persistence.EntityManager;
@@ -79,51 +80,10 @@ public class GenericMessageRepositoryImpl implements GenericMessageRepository {
 	}
 
 	@Override
-	public GenericMessage getGenericMessageById(int id) {
+	public int nextIdentity() throws SQLException {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 
-	@Override
-	public GenericMessage saveGenericMessage(GenericMessage gm) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void deleteGenericMessage(GenericMessage gm) {
-		// TODO Auto-generated method stub
-		
-	}
- 
-	/*
-    private EntityManager em;
-     
-    public GenericMessageRepositoryImpl(EntityManager em) {
-        this.em = em;
-    }
-
-	@Override
-	public GenericMessage getGenericMessageById(int id) {
-		return em.find(GenericMessage.class, id);
-	}
-
-	@Override
-	public GenericMessage saveGenericMessage(GenericMessage gm) {
-        if (gm.getId() == null) {
-            em.persist(gm);
-        } else {
-            gm = em.merge(gm);
-        }
-        return gm;
-	}
-
-	@Override
-	public void deleteGenericMessage(GenericMessage gm) {
-        if (em.contains(gm)) {
-            em.remove(gm);
-        } else {
-            em.merge(gm);
-        }
-	}*/
+	
 }

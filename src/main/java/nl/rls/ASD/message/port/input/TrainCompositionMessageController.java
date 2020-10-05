@@ -1,5 +1,6 @@
 package nl.rls.ASD.message.port.input;
 
+import java.sql.SQLException;
 import java.util.Date;
 
 import javax.validation.Valid;
@@ -33,7 +34,7 @@ public class TrainCompositionMessageController implements TrainCompositionMessag
     @ResponseStatus(HttpStatus.CREATED)
     public boolean createTrainCompositionMessage(String objectType, CompanyId company, String core, String variant, int timetableYear, Date startDate,
     		TrainId trainId, int messageStatus, int messageType, String messageTypeVersion, String messageIdentifier, Date messageDateTime,
-    		String senderReference, CompanyId sender, CompanyId recipient) 
+    		String senderReference, CompanyId sender, CompanyId recipient) throws SQLException
     {
     	return service.createTrainCompositionMessage(objectType, company, core, variant, timetableYear, startDate,
         		trainId, messageStatus, messageType, messageTypeVersion, messageIdentifier, messageDateTime,
