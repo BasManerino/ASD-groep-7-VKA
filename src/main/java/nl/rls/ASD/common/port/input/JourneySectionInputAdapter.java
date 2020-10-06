@@ -1,5 +1,5 @@
 package nl.rls.ASD.common.port.input;
 
-public interface JourneyInputAdapter {
+public interface JourneySectionInputAdapter {
 	 boolean existsById(boolean check);
 }
