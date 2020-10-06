@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import nl.rls.ASD.common.domain.CompanyId;
+import nl.rls.ASD.message.domain.MessageStatus;
 import nl.rls.ASD.message.domain.TrainCompositionMessage;
 import nl.rls.ASD.message.port.service.TrainCompositionMessageApplicationService;
 import nl.rls.ASD.vehicle.domain.TrainId;
@@ -25,15 +26,15 @@ import nl.rls.util.Response;
 @RequestMapping(BaseURL.BASE_PATH + "/traincompositionmessage")
 public class TrainCompositionMessageController implements TrainCompositionMessageInputAdapter{
 
-    @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
     public boolean createTrainCompositionMessage(String objectType, CompanyId company, String core, String variant, int timetableYear, Date startDate,
-    		TrainId trainId, int messageStatus, int messageType, String messageTypeVersion, String messageIdentifier, Date messageDateTime,
-    		String senderReference, CompanyId sender, CompanyId recipient) throws SQLException
+    		TrainId train, MessageStatus messageStatus, int messageType, String messageTypeVersion, String messageIdentifier, Date messageDateTime,
+    		String senderReference, CompanyId sender, CompanyId recipient, boolean companyCheck, boolean trainCheck, boolean senderCheck, boolean recipientCheck) throws SQLException
     {
     	TrainCompositionMessageApplicationService service = new TrainCompositionMessageApplicationService();
     	return service.createTrainCompositionMessage(objectType, company, core, variant, timetableYear, startDate,
-        		trainId, messageStatus, messageType, messageTypeVersion, messageIdentifier, messageDateTime,
-        		senderReference, sender, recipient);
+        		train, messageStatus, messageType, messageTypeVersion, messageIdentifier, messageDateTime,
+        		senderReference, sender, recipient, companyCheck, trainCheck, senderCheck, recipientCheck);
     }
 }

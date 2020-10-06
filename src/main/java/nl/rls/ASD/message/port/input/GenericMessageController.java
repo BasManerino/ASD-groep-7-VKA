@@ -18,21 +18,4 @@ import nl.rls.ci.url.BaseURL;
 @RestController
 @RequestMapping(BaseURL.BASE_PATH + "/genericmessage")
 public class GenericMessageController implements GenericMessageInputAdapter{
-    private final GenericMessageApplicationService service;
-
-    public GenericMessageController(GenericMessageApplicationService service) {
-        this.service = service;
-    }
-    
-    /*
-    @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseStatus(HttpStatus.CREATED)
-    public boolean createGenericMessage(String objectType, CompanyId company, String core, String variant, int timetableYear, Date startDate,
-    		TrainId trainId, int messageStatus, int messageType, String messageTypeVersion, String messageIdentifier, Date messageDateTime,
-    		String senderReference, CompanyId sender, CompanyId recipient) throws SQLException
-    {
-    	return service.createTrainCompositionMessage(objectType, company, core, variant, timetableYear, startDate,
-        		trainId, messageStatus, messageType, messageTypeVersion, messageIdentifier, messageDateTime,
-        		senderReference, sender, recipient);
-    }*/
 }

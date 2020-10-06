@@ -17,9 +17,8 @@ public class CompanyRepositoryImpl implements CompanyRepository2 {
 	}
 
 	@Override
-	public Company getCompanyById(CompanyId id) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean getCompanyById(boolean check) {
+		return check;
 	}
 
 	@Override

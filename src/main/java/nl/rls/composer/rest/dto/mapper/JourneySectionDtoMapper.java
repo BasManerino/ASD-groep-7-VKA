@@ -39,19 +39,19 @@ public class JourneySectionDtoMapper {
         }
         dto.setActivities(trainActivityTypeDtoList);
 
-//        dto.add(linkTo(methodOn(CompanyController.class)
+//        dto.add(linkTo(methodOn(CompanyController2.class)
 //                .getById(entity.getResponsibilityActualSection().getResponsibleRU().getId()))
 //                .withRel("responsibilityActualSectionRU")
 //                .withTitle(entity.getResponsibilityActualSection().getResponsibleRU().getName()));
-//        dto.add(linkTo(methodOn(CompanyController.class)
+//        dto.add(linkTo(methodOn(CompanyController2.class)
 //                .getById(entity.getResponsibilityActualSection().getResponsibleIM().getId()))
 //                .withRel("responsibilityActualSectionIM")
 //                .withTitle(entity.getResponsibilityActualSection().getResponsibleIM().getName()));
-//        dto.add(linkTo(methodOn(CompanyController.class)
+//        dto.add(linkTo(methodOn(CompanyController2.class)
 //                .getById(entity.getResponsibilityNextSection().getResponsibleRU().getId()))
 //                .withRel("responsibilityNextSectionRU")
 //                .withTitle(entity.getResponsibilityNextSection().getResponsibleRU().getName()));
-//        dto.add(linkTo(methodOn(CompanyController.class)
+//        dto.add(linkTo(methodOn(CompanyController2.class)
 //                .getById(entity.getResponsibilityNextSection().getResponsibleIM().getId()))
 //                .withRel("responsibilityNextSectionIM")
 //                .withTitle(entity.getResponsibilityNextSection().getResponsibleIM().getName()));
