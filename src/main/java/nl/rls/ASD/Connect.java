@@ -6,8 +6,6 @@ import java.sql.SQLException;
 import org.springframework.boot.autoconfigure.amqp.RabbitProperties.Cache.Connection;
 import org.springframework.stereotype.Service;
 
-import lombok.var;
-
 @Service("Connect")
 public class Connect {
 	

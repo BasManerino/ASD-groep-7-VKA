@@ -2,9 +2,8 @@ package nl.rls.ASD.message.port.service;
 
 import java.sql.SQLException;
 import java.util.Date;
+
 import nl.rls.ASD.common.domain.CompanyId;
-import nl.rls.ASD.common.port.input.CompanyController2;
-import nl.rls.ASD.common.port.input.CompanyInputAdapter;
 import nl.rls.ASD.message.domain.GenericMessage;
 import nl.rls.ASD.message.domain.GenericMessageId;
 import nl.rls.ASD.message.domain.MessageHeader;
