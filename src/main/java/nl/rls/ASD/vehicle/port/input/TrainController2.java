@@ -2,6 +2,9 @@ package nl.rls.ASD.vehicle.port.input;
 
 import nl.rls.ASD.common.domain.JourneySectionId;
 import nl.rls.ASD.message.domain.TrainCompositionMessageId;
+import nl.rls.ASD.vehicle.domain.RollingStock;
+import nl.rls.ASD.vehicle.domain.RollingStockId;
+import nl.rls.ASD.vehicle.domain.Train;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -27,9 +30,10 @@ public class TrainController2 implements TrainInputAdapter {
     @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     public boolean addNewTrain(int type, String nr, Date timeAtHannover, Date timeAtTransfer,
-                               int tPoint, int compId, List<JourneySectionId> jSections, List<TrainCompositionMessageId> cMessage) {
+                               int tPoint, int compId) {
+        // TODO: Request body
         TrainApplicationService service = new TrainApplicationService();
-        return service.addNewTrain(type, nr, timeAtHannover, timeAtTransfer, tPoint, compId, jSections, cMessage);
+        return service.addNewTrain(type, nr, timeAtHannover, timeAtTransfer, tPoint, compId, null, null);
     }
 
 }

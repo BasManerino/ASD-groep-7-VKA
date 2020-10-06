@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface TrainInputAdapter {
 	boolean addNewTrain(int type, String nr, Date timeAtHannover, Date timeAtTransfer,
-						int tPoint, int compId, List<JourneySectionId> jSections, List<TrainCompositionMessageId> cMessage);
+						int tPoint, int compId);
 
 	boolean existsById(boolean check);
 }
