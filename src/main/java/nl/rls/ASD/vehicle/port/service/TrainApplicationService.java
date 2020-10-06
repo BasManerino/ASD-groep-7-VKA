@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import nl.rls.ASD.common.persistence.repository.CompanyRepository2;
 import nl.rls.ASD.common.persistence.repository.CompanyRepositoryImpl;
 import nl.rls.ASD.vehicle.domain.*;
+import nl.rls.ASD.vehicle.persistence.repository.MockRollingStockRepository;
 import nl.rls.ASD.vehicle.persistence.repository.MockTractionRepository;
 import nl.rls.ASD.vehicle.persistence.repository.MockTrainRepository;
 import nl.rls.ASD.vehicle.persistence.repository.TractionRepository;
@@ -48,11 +49,6 @@ public class TrainApplicationService {
 		
 		//save traction in train object to rollingstock repo
 		
-		
-		
-		return true;
-		
-		
-		
+		return new MockRollingStockRepository().saveRollingStock(tractionInTrain);
 	}
 }
