@@ -3,7 +3,8 @@ package nl.rls.ASD.vehicle.persistence.repository;
 import java.sql.SQLException;
 import java.util.Optional;
 
-import nl.rls.composer.domain.TrainComposition;
+import nl.rls.ASD.vehicle.domain.TrainCompositionId;
+import nl.rls.ASD.vehicle.domain.TrainComposition;
 
 public class TrainCompositionRepositoryImpl implements TrainCompositionRepository{
 
@@ -14,7 +15,7 @@ public class TrainCompositionRepositoryImpl implements TrainCompositionRepositor
 	}
 	
 	@Override
-	public Optional<TrainComposition> findByIdAndOwnerId(int id, int ownerId) {
+	public Optional<TrainComposition> findById(TrainCompositionId id) {
 		return null;
 	}
 
