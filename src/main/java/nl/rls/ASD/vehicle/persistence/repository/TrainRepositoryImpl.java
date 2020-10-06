@@ -1,10 +1,8 @@
 package nl.rls.ASD.vehicle.persistence.repository;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.Random;
-
 import nl.rls.ASD.vehicle.domain.Train;
+
+import java.util.Random;
 
 public class TrainRepositoryImpl implements TrainRepository{
 
@@ -24,7 +22,7 @@ public class TrainRepositoryImpl implements TrainRepository{
 	@Override
 	public boolean store(Train train) {
 		// TODO: Actual connection to the db
-		return false;
+		return true;
 	}
     
 }

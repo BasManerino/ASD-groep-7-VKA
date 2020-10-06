@@ -8,21 +8,21 @@ import java.util.List;
 public class TrainService implements TrainOutputAdapter {
     @Override
     public boolean doesCompanyExist(int compId) {
-        return false;
+        return true;
     }
 
     @Override
     public boolean doesLocationExist(int tPoint) {
-        return false;
+        return true;
     }
 
     @Override
     public boolean doJourneySectionsExist(List<JourneySectionId> jSections) {
-        return false;
+        return true;
     }
 
     @Override
     public boolean doTrainCompositionMessagesExist(List<TrainCompositionMessageId> cMessages) {
-        return false;
+        return true;
     }
 }
