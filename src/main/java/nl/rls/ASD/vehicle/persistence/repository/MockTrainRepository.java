@@ -32,7 +32,7 @@ public class MockTrainRepository implements TrainRepository{
 			List<TrainCompositionMessageId> trainCompositionMessages = new ArrayList<TrainCompositionMessageId>();
 			
 			return new Train(trainId,
-					trainType,
+					null, trainType,
 					operationalTrainNumber,
 					scheduledTimeAtHandover,
 					scheduledTimeAtTransfer,
@@ -55,7 +55,7 @@ public class MockTrainRepository implements TrainRepository{
 			List<TrainCompositionMessageId> trainCompositionMessages = new ArrayList<TrainCompositionMessageId>();
 			
 			return new Train(trainId,
-					trainType,
+					null, trainType,
 					operationalTrainNumber,
 					scheduledTimeAtHandover,
 					scheduledTimeAtTransfer,
@@ -66,6 +66,18 @@ public class MockTrainRepository implements TrainRepository{
 		}
 		
 		return null;
+	}
+
+	@Override
+	public int nextIdentity() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean store(Train train) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 }

@@ -68,5 +68,9 @@ public class TrainCompositionMessageApplicationService {
 		repo.saveTrainCompositionMessage(tcm);
 		return true;
 	}
-	
+
+	public boolean getTrainCompositionMessageById(boolean check) {
+		TrainCompositionMessageRepository repo = new TrainCompositionMessageRepositoryImpl();
+		return repo.getTrainCompositionMessageById(check);
+	}
 }

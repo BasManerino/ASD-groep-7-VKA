@@ -3,7 +3,6 @@ package nl.rls.ASD.message.persistence.repository;
 import java.sql.SQLException;
 
 import nl.rls.ASD.message.domain.TrainCompositionMessage;
-import nl.rls.ASD.message.domain.TrainCompositionMessageId;
 
 public class TrainCompositionMessageRepositoryImpl implements TrainCompositionMessageRepository {
 
@@ -14,9 +13,8 @@ public class TrainCompositionMessageRepositoryImpl implements TrainCompositionMe
 	}
 
 	@Override
-	public TrainCompositionMessage getTrainCompositionMessageById(TrainCompositionMessageId id) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean getTrainCompositionMessageById(boolean check) {
+		return check;
 	}
 
 	@Override

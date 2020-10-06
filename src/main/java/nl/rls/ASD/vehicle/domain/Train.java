@@ -13,6 +13,7 @@ public class Train {
 
 	private TrainId id;
     private int trainType;
+    private RollingStockId rollingStock;
     private String operationalTrainNumber;
     private Date scheduledTimeAtHandover;
     private Date scheduledDateTimeAtTransfer;
@@ -22,16 +23,11 @@ public class Train {
     private List<JourneySectionId> journeySections = new ArrayList<JourneySectionId>();
     private List<TrainCompositionMessageId> trainCompositionMessages = new ArrayList<TrainCompositionMessageId>();
     
-	public Train(TrainId id, 
-			int trainType, 
-			String operationalTrainNumber, 
-			Date scheduledTimeAtHandover,
-			Date scheduledDateTimeAtTransfer, 
-			LocationId transferPoint, 
-			CompanyId transfereeIM,
-			List<JourneySectionId> journeySections, 
-			List<TrainCompositionMessageId> trainCompositionMessages) {
+	public Train(TrainId id, RollingStockId rollingStock, int trainType, String operationalTrainNumber, Date scheduledTimeAtHandover,
+			Date scheduledDateTimeAtTransfer, LocationId transferPoint, CompanyId transfereeIM,
+			List<JourneySectionId> journeySections, List<TrainCompositionMessageId> trainCompositionMessages) {
 		this.id = id;
+		this.rollingStock = rollingStock;
 		this.trainType = trainType;
 		this.operationalTrainNumber = operationalTrainNumber;
 		this.scheduledTimeAtHandover = scheduledTimeAtHandover;
@@ -67,6 +63,12 @@ public class Train {
 	}
 	public void setId(TrainId id) {
 		this.id = id;
+	}
+	public RollingStockId getRollingStock() {
+		return rollingStock;
+	}
+	public void setRollingStock(RollingStockId rollingStock) {
+		this.rollingStock = rollingStock;
 	}
 	public int getTrainType() {
 		return trainType;

@@ -1,10 +1,14 @@
 package nl.rls.ASD.vehicle.persistence.repository;
 
-import java.util.Optional;
+import java.sql.SQLException;
 
-import nl.rls.composer.domain.WagonInTrain;
+import nl.rls.ASD.vehicle.domain.TrainId;
+import nl.rls.ASD.vehicle.domain.WagonInTrain;
 
 public interface WagonInTrainRepository {
 
-    Optional<WagonInTrain> findById(Integer id);
+	public int nextIdentity() throws SQLException;
+
+	public WagonInTrain wagonInTrain(TrainId trainId);
+	public boolean store(WagonInTrain wagonInTrain);
 }

@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import nl.rls.ASD.vehicle.domain.TrainCompositionId;
+import nl.rls.ASD.vehicle.domain.WagonCode;
 import nl.rls.ASD.vehicle.port.service.TrainCompositionApplicationService;
 import nl.rls.ci.url.BaseURL;
 
@@ -18,9 +20,10 @@ public class TrainCompositionController2 implements TrainCompositionInputAdapter
     
     @PostMapping(value = "/addWagon", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
-    public boolean addWagonToTrainComposition(boolean check) throws SQLException
+    public boolean addWagonToTrainComposition(int id, WagonCode wagonCode, boolean journeyCheck, boolean wagonCheck) throws SQLException
     {
     	TrainCompositionApplicationService service = new TrainCompositionApplicationService();
-    	return service.addWagonToTainComposition(check);
+    	TrainCompositionId tcid = new TrainCompositionId(id);
+    	return service.addWagonToTainComposition(tcid, wagonCode, journeyCheck, wagonCheck);
     }
 }

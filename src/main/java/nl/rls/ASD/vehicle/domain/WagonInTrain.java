@@ -33,5 +33,17 @@ public class WagonInTrain {
 	public WagonCode getWagon() {
 		return wagon;
 	}
+	public void setBrakeType(BrakeType brakeType) {
+		this.brakeType = brakeType;
+	}
+	public void setTotalLoadWeight(int totalLoadWeight) {
+		this.totalLoadWeight = totalLoadWeight;
+	}
+	public void setDangerGoodsInWagons(List<DangerGoodsInWagonId> dangerGoodsInWagons) {
+		this.dangerGoodsInWagons = dangerGoodsInWagons;
+	}
+	public void setWagon(WagonCode wagon) {
+		this.wagon = wagon;
+	}
 
 }
