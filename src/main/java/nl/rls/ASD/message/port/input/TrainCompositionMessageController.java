@@ -27,7 +27,7 @@ public class TrainCompositionMessageController implements TrainCompositionMessag
     @ResponseStatus(HttpStatus.CREATED)
     public boolean createTrainCompositionMessage(String objectType, Integer company, String core, String variant, int timetableYear, Date startDate,
     		Integer train, MessageStatus messageStatus, int messageType, String messageTypeVersion, String messageIdentifier, Date messageDateTime,
-    		String senderReference, Integer sender, Integer recipient, boolean companyCheck, boolean trainCheck, boolean senderCheck, boolean recipientCheck) {
+    		String senderReference, Integer sender, Integer recipient, boolean companyCheck, boolean trainCheck, boolean senderCheck, boolean recipientCheck) throws SQLException {
     	TrainCompositionMessageApplicationService service = new TrainCompositionMessageApplicationService();
     	CompanyId company2 = new CompanyId(company);
     	TrainId train2 = new TrainId(train);
