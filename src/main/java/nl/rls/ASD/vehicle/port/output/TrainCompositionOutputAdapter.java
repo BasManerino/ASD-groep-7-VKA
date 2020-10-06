@@ -2,6 +2,6 @@ package nl.rls.ASD.vehicle.port.output;
 
 public interface TrainCompositionOutputAdapter {
 	
-	boolean getJourneyById(boolean check);
+	boolean getJourneySectionById(boolean check);
 	
 }

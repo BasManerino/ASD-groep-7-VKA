@@ -7,17 +7,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import nl.rls.ASD.common.port.service.JourneyApplicationService;
+import nl.rls.ASD.common.port.service.JourneySectionApplicationService;
 import nl.rls.ci.url.BaseURL;
 
 @RestController
 @RequestMapping(BaseURL.BASE_PATH + "/journey")
-public class JourneyController2 implements JourneyInputAdapter{
+public class JourneySectionController2 implements JourneySectionInputAdapter{
     
     @GetMapping(value = "/getId", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     public boolean existsById(boolean check) {
-    	JourneyApplicationService service = new JourneyApplicationService();
+    	JourneySectionApplicationService service = new JourneySectionApplicationService();
     	return service.getJourneyById(check);
     }
 }
