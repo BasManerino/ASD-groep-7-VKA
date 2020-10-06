@@ -23,7 +23,7 @@ public class TrainService implements TrainOutputAdapter {
 
     @Override
     public boolean doJourneySectionsExist(List<JourneySectionId> jSections) {
-        JourneyInputAdapter jsAdapter = new JourneyController2();
+        JourneySectionInputAdapter jsAdapter = new JourneySectionController2();
         for (JourneySectionId id : jSections) {
             if (!jsAdapter.existsById(true)) return false;
         }
