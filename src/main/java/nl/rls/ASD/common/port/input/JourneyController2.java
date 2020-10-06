@@ -20,4 +20,5 @@ public class JourneyController2 implements JourneyInputAdapter{
     	JourneyApplicationService service = new JourneyApplicationService();
     	return service.getJourneyById(check);
     }
+
 }

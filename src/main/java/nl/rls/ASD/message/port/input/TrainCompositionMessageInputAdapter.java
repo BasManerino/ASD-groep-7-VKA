@@ -11,4 +11,6 @@ public interface TrainCompositionMessageInputAdapter{
 	boolean createTrainCompositionMessage(String objectType, Integer company, String core, String variant, int timetableYear, Date startDate,
 			Integer trainId, MessageStatus messageStatus, int messageType, String messageTypeVersion, String messageIdentifier, Date messageDateTime,
     		String senderReference, Integer sender, Integer recipient, boolean companyCheck, boolean trainCheck, boolean senderCheck, boolean recipientCheck) throws SQLException;
+
+	boolean existsById(boolean check);
 }

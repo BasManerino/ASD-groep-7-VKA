@@ -8,7 +8,7 @@ import nl.rls.ASD.message.domain.TrainCompositionMessageId;
 public interface TrainCompositionMessageRepository{
 	int nextIdentity() throws SQLException;
 	
-    TrainCompositionMessage getTrainCompositionMessageById(TrainCompositionMessageId id);
+    boolean getTrainCompositionMessageById(boolean check);
    
     TrainCompositionMessage saveTrainCompositionMessage(TrainCompositionMessage gm);
      

@@ -4,6 +4,8 @@ import java.sql.SQLException;
 import java.util.Date;
 
 import nl.rls.ASD.common.domain.CompanyId;
+import nl.rls.ASD.common.persistence.repository.CompanyRepository2;
+import nl.rls.ASD.common.persistence.repository.CompanyRepositoryImpl;
 import nl.rls.ASD.message.domain.GenericMessage;
 import nl.rls.ASD.message.domain.GenericMessageId;
 import nl.rls.ASD.message.domain.MessageHeader;
@@ -68,5 +70,9 @@ public class TrainCompositionMessageApplicationService {
 		repo.saveTrainCompositionMessage(tcm);
 		return true;
 	}
-	
+
+	public boolean getTrainCompositionMessageById(boolean check) {
+		TrainCompositionMessageRepository repo = new TrainCompositionMessageRepositoryImpl();
+		return repo.getTrainCompositionMessageById(check);
+	}
 }

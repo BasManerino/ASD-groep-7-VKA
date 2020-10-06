@@ -14,9 +14,8 @@ public class TrainCompositionMessageRepositoryImpl implements TrainCompositionMe
 	}
 
 	@Override
-	public TrainCompositionMessage getTrainCompositionMessageById(TrainCompositionMessageId id) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean getTrainCompositionMessageById(boolean check) {
+		return check;
 	}
 
 	@Override

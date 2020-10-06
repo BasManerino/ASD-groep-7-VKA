@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import nl.rls.ASD.vehicle.port.service.TrainApplicationService;
 import nl.rls.ci.url.BaseURL;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -28,11 +29,11 @@ public class TrainController2 implements TrainInputAdapter {
 
     @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
-    public boolean addNewTrain(int type, String nr, Date timeAtHannover, Date timeAtTransfer,
-                               int tPoint, int compId) {
+    public boolean addNewTrain(Integer type, String nr, Date timeAtHannover, Date timeAtTransfer,
+                               Integer tPoint, Integer compId) {
         // TODO: Request body
         TrainApplicationService service = new TrainApplicationService();
-        return service.addNewTrain(type, nr, timeAtHannover, timeAtTransfer, tPoint, compId, null, null);
+        return service.addNewTrain(type, nr, timeAtHannover, timeAtTransfer, tPoint, compId, new ArrayList<>(), new ArrayList<>());
     }
 
 }
