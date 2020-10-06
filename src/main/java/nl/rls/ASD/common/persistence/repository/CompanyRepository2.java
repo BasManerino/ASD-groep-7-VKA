@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import org.springframework.stereotype.Service;
 
 import nl.rls.ASD.common.domain.Company;
-import nl.rls.ASD.common.domain.CompanyId;
 
 @Service("Company Repository")
 public interface CompanyRepository2{

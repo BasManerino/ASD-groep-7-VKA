@@ -1,12 +1,8 @@
 package nl.rls.ASD.common.persistence.repository;
 
 import java.sql.SQLException;
-import java.util.Optional;
-
-import org.springframework.stereotype.Service;
 
 import nl.rls.ASD.common.domain.Company;
-import nl.rls.ASD.common.domain.CompanyId;
 
 public class CompanyRepositoryImpl implements CompanyRepository2 {
 
