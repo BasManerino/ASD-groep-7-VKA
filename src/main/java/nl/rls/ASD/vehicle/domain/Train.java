@@ -22,9 +22,15 @@ public class Train {
     private List<JourneySectionId> journeySections = new ArrayList<JourneySectionId>();
     private List<TrainCompositionMessageId> trainCompositionMessages = new ArrayList<TrainCompositionMessageId>();
     
-	public Train(TrainId id, int trainType, String operationalTrainNumber, Date scheduledTimeAtHandover,
-			Date scheduledDateTimeAtTransfer, LocationId transferPoint, CompanyId transfereeIM,
-			List<JourneySectionId> journeySections, List<TrainCompositionMessageId> trainCompositionMessages) {
+	public Train(TrainId id, 
+			int trainType, 
+			String operationalTrainNumber, 
+			Date scheduledTimeAtHandover,
+			Date scheduledDateTimeAtTransfer, 
+			LocationId transferPoint, 
+			CompanyId transfereeIM,
+			List<JourneySectionId> journeySections, 
+			List<TrainCompositionMessageId> trainCompositionMessages) {
 		this.id = id;
 		this.trainType = trainType;
 		this.operationalTrainNumber = operationalTrainNumber;
@@ -36,9 +42,15 @@ public class Train {
 		this.trainCompositionMessages = trainCompositionMessages;
 	}
 
-	public Train(int id, int trainType, String operationalTrainNumber, Date scheduledTimeAtHandover,
-				 Date scheduledDateTimeAtTransfer, int transferPoint, int transfereeIM,
-				 List<JourneySectionId> journeySections, List<TrainCompositionMessageId> trainCompositionMessages) {
+	public Train(int id,
+			int trainType,
+			String operationalTrainNumber,
+			Date scheduledTimeAtHandover,
+			Date scheduledDateTimeAtTransfer,
+			int transferPoint,
+			int transfereeIM,
+			List<JourneySectionId> journeySections, 
+			List<TrainCompositionMessageId> trainCompositionMessages) {
 		this.id = new TrainId(id);
 		this.trainType = trainType;
 		this.operationalTrainNumber = operationalTrainNumber;
@@ -103,6 +115,10 @@ public class Train {
 	}
 	public void setTrainCompositionMessages(List<TrainCompositionMessageId> trainCompositionMessages) {
 		this.trainCompositionMessages = trainCompositionMessages;
+	}
+	
+	public void freePosition(int position) {
+		
 	}
 
 }

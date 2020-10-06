@@ -10,4 +10,6 @@ public interface RollingStockRepository {
     List<RollingStock> findAllByTrainCompositionIdAndTrainCompositionOwnerId(int trainCompositionId, int ownerId);
 
     Optional<RollingStock> findByIdAndTrainCompositionIdAndTrainCompositionOwnerId(int rollingStockId, int trainCompositionId, int ownerId);
+    
+    boolean saveRollingStock(nl.rls.ASD.vehicle.domain.RollingStock rollingStock);
 }

@@ -3,7 +3,7 @@ package nl.rls.ASD.vehicle.persistence.repository;
 import java.util.List;
 import java.util.Optional;
 
-import nl.rls.composer.domain.Train;
+import nl.rls.ASD.vehicle.domain.Train;
 
 public class TrainRepositoryImpl implements TrainRepository{
 
@@ -12,5 +12,10 @@ public class TrainRepositoryImpl implements TrainRepository{
 		// TODO Auto-generated method stub
 		return check;
 	}
-    
+
+	@Override
+	public Train getTrainById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

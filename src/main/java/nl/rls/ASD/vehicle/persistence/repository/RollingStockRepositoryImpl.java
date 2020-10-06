@@ -21,4 +21,10 @@ public class RollingStockRepositoryImpl implements RollingStockRepository {
 		return null;
 	}
 
+	@Override
+	public boolean saveRollingStock(nl.rls.ASD.vehicle.domain.RollingStock rollingStock) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }
